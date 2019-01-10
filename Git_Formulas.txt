@@ -1,0 +1,68 @@
+GIT
+
+Its a fully distributed version control tool
+
+Initial Goals
+.Spped
+.Support for non-linear developement(thousands of parallel barnch)
+.Fully distributed
+.Able to handle large projects like Linux efficiently
+
+SCM Terminology
+
+.Server/Client
+.Repository
+.Workspace
+.Branch
+.Checkin/Checkout
+.Revision
+.Baseline
+
+Snapshot
+
+Set the name and email for Git to use when you commit
+
+git config --global user.name "Mandhadapu"
+git config --global user.email "sathish.mandhadapu798@gmail.com"
+git config --global push.default "simple"
+git config --list (To check all the configuartions)
+
+Create New repository
+
+git init
+git clone <source_central_Repo> <your_workspace>
+git clone http://........ Directoryname
+
+git log (Will give you all the commit id's in your repository, Latest to old)
+
+git config --bool core.bare true (To convert non-bare repository to bare repository)
+
+.gitignore
+
+git log
+git log -3 (Third commit from latest)
+git log --oneline 
+git log --grep "string" (To search based on commit string)
+
+Branching
+
+git branch branch_name (To create branch)
+git branch (To know branch name)
+git checkout branch_name (To switch branch)
+git diff master your_branch (Difference between branches)
+
+Merging
+
+git merge <source_branch> <destination_branch>
+When we perform merging what ever latest commmit Id's in source branch will merge into destination branch
+
+git push -u --all (To push all the branches and corresponding Id'd to central trepository)
+
+git merge <commmitId> (To merge particular commitId from souce to destination branch)
+
+Stashing
+It will take backup of file and undo the previous changes)
+ 
+git stash
+git stash list (To show backup details)
+
